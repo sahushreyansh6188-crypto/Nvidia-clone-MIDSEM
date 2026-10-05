@@ -72,7 +72,7 @@ section {
 }
 
 section .card {
-    height: 40vh;
+    height: 43vh;
     width: 35vh;
     border: 1px solid #EBEBEB;
     border-radius: 10px;
@@ -81,7 +81,7 @@ section .card {
     font-size: 17px;
 }
 section .card:hover {
-    height: 42vh;
+    height: 45vh;
     width: 37vh;
     background-color: rgb(220, 217, 217);
     font-size: 20px;
