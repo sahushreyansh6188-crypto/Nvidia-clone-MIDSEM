@@ -13,7 +13,9 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
+    position: sticky;
+    top: 0px;
+    F
 }
 
 a {
@@ -26,6 +28,7 @@ a {
 a:hover {
     color: #76b900;
     font-size: large;
+    text-shadow: 1px 1px 1px #76b900;
 }
 
 .left-nav {
@@ -33,10 +36,11 @@ a:hover {
     align-items: center;
     gap: 3vh;
 }
+
 .mid-nav {
     display: flex;
     align-items: center;
-    gap: 7vh;
+    gap: 3vh;
 }
 
 .right-nav {
@@ -44,12 +48,15 @@ a:hover {
     align-items: center;
     gap: 3vh;
 }
-.right-nav img{
+
+.right-nav img {
     height: 25px;
     transition: 0.1s ease;
 }
-.right-nav img:hover{
+
+.right-nav img:hover {
     height: 28px;
+    box-shadow: 0vh 0vh 5vh rgba(0, 0, 0, 0.3);
 }
 
 h2 {
@@ -68,7 +75,7 @@ section {
     justify-content: center;
     gap: 15px;
     width: 100%;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
 }
 
 section .card {
@@ -80,11 +87,12 @@ section .card {
     transition: 0.3s ease;
     font-size: 17px;
 }
+
 section .card:hover {
     height: 45vh;
     width: 37vh;
-    background-color: rgb(220, 217, 217);
     font-size: 20px;
+    box-shadow: 0vh 0vh 3vh #067b00;
 }
 
 .card img {
@@ -93,10 +101,11 @@ section .card:hover {
     transition: 0.3s ease;
 
 }
-.card img:hover{
+
+.card img:hover {
     width: 37vh;
 }
-    
+
 .card h3,
 p {
     padding: 0 10px;
@@ -108,15 +117,18 @@ h3 {
 }
 
 .links {
-    width: 100%;
-    height: 5vh;
+    width: auto;
+    height: auto;
     background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
+    padding: 15px;
     margin-top: 20px;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
+}
+
+.links {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .cookies {
@@ -152,6 +164,69 @@ h3 {
     justify-content: center;
 }
 
-.mobile1 {
+.mobile {
     display: none;
+}
+
+@media screen and (max-width: 1120px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .cookies {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cookies div {
+        width: 100%;
+    }
+
+    .cookies button {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .links {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .cookies div {
+        width: auto;
+        padding: 10px;
+    }
+
+    .cookies button {
+        padding: 5px;
+        width: 100%;
+    }
+
+    .links {
+        width: auto;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .cookies div {
+        width: auto;
+        padding: 10px;
+    }
+
+    .cookies button {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .links {
+        width: auto;
+    }
 }
